@@ -9,15 +9,25 @@ function PostList() {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
                 console.log(response.data);
+                let data = response.data;
                 // update state
-                setPosts(() => {
-                    posts = response.data;
-                })
+                setPosts(data);
+                
             })
-    })
+    },[])
 
   return (
-    <div>PostList</div>
+    <div>
+        <h3>List of Posts</h3>
+        {
+            posts.map(post => {
+               return (<div className='posts' id={post.id}>
+                    <h4>{post.title}</h4>
+                    <p>{post.body}</p>
+               </div>)
+            })
+        }
+    </div>
   )
 }
 
