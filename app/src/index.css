@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.posts {
+  background-color: rgb(162, 202, 237);
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.posts h4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+.posts p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
